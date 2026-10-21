@@ -142,8 +142,13 @@
       right: -70px;
       top: 70px;
       border-radius: 50%;
-      background:
-        radial-gradient(circle at 40% 40%, #24442b 0, #14251a 28%, #0d1510 50%, transparent 70%);
+      background: radial-gradient(
+        circle at 40% 40%,
+        #24442b 0,
+        #14251a 28%,
+        #0d1510 50%,
+        transparent 70%
+      );
       opacity: .8;
       pointer-events: none;
     }
@@ -194,36 +199,35 @@
       font-family: var(--display);
     }
 
-    /* Main name: distinctive editorial typography */
+    /* Full name on one line */
     .hero-title {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      display: block;
+      width: 100%;
     }
 
-    .hero-title .name {
+    .hero-title .full-name {
       display: block;
+      width: 100%;
+      white-space: nowrap;
       font-family: var(--signature);
-      font-size: clamp(76px, 10.2vw, 124px);
+      font-size: clamp(35px, 7.5vw, 94px);
       font-weight: 400;
-      line-height: .98;
-      letter-spacing: 1px;
+      line-height: 1.2;
+      letter-spacing: 0;
       color: var(--text);
-      max-width: 100%;
     }
 
     .hero-title .surname {
       color: var(--green);
+      font-family: var(--signature);
       font-style: italic;
-      margin-left: clamp(18px, 5vw, 65px);
-      margin-top: 4px;
     }
 
     .hero-title .tagline {
       display: block;
       margin-top: 25px;
       font-family: var(--display);
-      font-size: clamp(24px, 3.3vw, 39px);
+      font-size: clamp(22px, 3.3vw, 39px);
       line-height: 1.25;
       letter-spacing: -1.2px;
       font-weight: 700;
@@ -661,18 +665,13 @@
         right: -220px;
       }
 
-      .hero-title .name {
-        font-size: clamp(59px, 13vw, 94px);
+      .hero-title .full-name {
+        font-size: clamp(34px, 7.1vw, 54px);
         letter-spacing: 0;
-        line-height: 1.02;
-      }
-
-      .hero-title .surname {
-        margin-left: 16px;
       }
 
       .hero-title .tagline {
-        font-size: clamp(23px, 5.5vw, 34px);
+        font-size: clamp(22px, 5.5vw, 34px);
         letter-spacing: -1px;
         margin-top: 22px;
       }
@@ -723,12 +722,9 @@
     }
 
     @media (max-width: 380px) {
-      .hero-title .name {
-        font-size: 53px;
-      }
-
-      .hero-title .surname {
-        margin-left: 10px;
+      .hero-title .full-name {
+        font-size: 29px;
+        letter-spacing: -0.5px;
       }
 
       .hero-status {
@@ -774,8 +770,7 @@
         </div>
 
         <h1 class="hero-title">
-          <span class="name">SAGARIKA</span>
-          <span class="name surname">POOJARY</span>
+          <span class="full-name">SAGARIKA <span class="surname">POOJARY</span></span>
           <span class="tagline">
             Building ideas with <span class="accent">intelligence.</span>
           </span>
